@@ -63,7 +63,7 @@
 <div class="space-y-2">
     <h1 class="font-serif">I want a picture of:</h1>
     {#if a1 || a2}
-    <input class="border-b-4 outline-none bg-sky-50 border-sky-200 text-sky-500"
+    <input class="border-b-4 outline-none bg-sky-50 dark:bg-transparent dark:text-sky-50 dark:border-sky-500 border-sky-200 text-sky-500"
             type="text" 
             placeholder={imPh} 
             bind:value={image} 
@@ -76,7 +76,7 @@
     <h1 class="font-serif">made out of:</h1>
     <div class="pb-4 flex gap-8">
         {#if b1 || b2}
-        <input class="border-b-4 outline-none bg-sky-50 border-sky-200 text-sky-500"
+        <input class="border-b-4 outline-none dark:bg-transparent dark:text-sky-50 dark:border-sky-500 bg-sky-50 border-sky-200 text-sky-500"
                 type="text" 
                 placeholder={cmPh} 
                 bind:value={composition} 
@@ -90,7 +90,7 @@
     </div>
     <button class="font-sans font-medium px-8 text-lg sm:text-2xl md:text-4xl 
                 {disabled ? "bg-sky-50 text-sky-200": "bg-sky-500 text-white hover:bg-sky-400"} 
-                p-4 outline rounded w-full transition duration-300" {disabled}
+                p-4 rounded w-full transition duration-300" {disabled}
                 on:click|once={submit}>
                 SUBMIT
     </button>

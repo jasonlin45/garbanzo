@@ -55,7 +55,7 @@
 </script>
 <svelte:window on:keydown={handleKeydown}/>
 
-<div class="p-20 pb-4 flex flex-col h-full space-y-4 border-2" in:fade>
+<div class="p-20 pb-4 flex flex-col h-full space-y-4 dark:bg-slate-800" in:fade>
     <h1 class="text-6xl font-bold text-sky-500 text-center">Gallery</h1>
     <div class="overflow-scroll flex flex-auto flex-wrap grow gap-8 justify-center">
         <!-- <Gallery on:click={handleClick}> -->

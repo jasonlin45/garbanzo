@@ -37,7 +37,8 @@
 
         var body = await res.json();
         let loc = body.Location;
-
+        let tries = 150;
+        
         while(tries > 0){
             const r = await fetch(loc);
             var body = await r.json();
@@ -62,7 +63,7 @@
 
 
 <div in:fade>
-    <div class="flex h-screen text-slate-700">
+    <div class="flex h-screen text-slate-700 dark:text-white">
         {#if !mosaic}
         <div class="m-auto text-xl sm:text-3xl md:text-6xl space-y-2 font-serif" transition:fade|local on:outroend={() => transitioning = false}>
             <UploadForm on:data={handlePost}/>

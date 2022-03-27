@@ -29,7 +29,7 @@
         url.search = new URLSearchParams(params).toString();
 
         const res = await fetch(url);
-        let tries = 120;
+        let tries = 150;
         const wait_time = 5000;
         var body = await res.json();
         let loc = body.Location;
@@ -55,7 +55,7 @@
 </script>
 <!-- <Spinner/> -->
 <div in:fade>
-    <div class="flex h-screen text-slate-700">
+    <div class="flex h-screen text-slate-700 dark:text-white">
         {#if !mosaic}
         <div class="m-auto text-xl sm:text-3xl md:text-6xl space-y-2 font-serif" transition:fade|local on:outroend={() => transitioning = false}>
             <Form on:data={handlePost}/>
